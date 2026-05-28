@@ -1,0 +1,4 @@
+fn calculate_square(val) {
+    let result = val * val;
+    return result;
+}

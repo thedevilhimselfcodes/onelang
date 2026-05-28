@@ -1,0 +1,12 @@
+let alpha = 10;
+let beta = 20;
+
+# Complex boolean evaluation structure
+# If the parser gets confused by the token streaming sequence, it will throw a fit here
+if (alpha > 5 && beta == 20) {
+    print "Parser passed basic validation";
+}
+
+# The true stress test: Variable re-assignment right after a complex statement
+alpha = alpha + 5;
+print alpha;

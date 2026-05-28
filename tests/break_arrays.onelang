@@ -1,0 +1,18 @@
+fn process_layer(matrix[]) {
+    let i = 0;
+    let bounding_limit = len(matrix);
+    
+    while (i < bounding_limit) {
+        # Mutate array values dynamically inside a loop block
+        matrix[i] = matrix[i] * 2;
+        i = i + 1;
+    }
+    return 1;
+}
+
+let hardware_stream = [10, 20, 30, 40];
+
+let success_flag = process_layer(hardware_stream);
+
+print "Element at index 2 should be 60:";
+print hardware_stream[2];

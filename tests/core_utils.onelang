@@ -1,0 +1,27 @@
+# Enforce explicit array declaration using trailing brackets signature
+fn compute_average(dataset[]) {
+    let sum = 0;
+    let i = 0;
+    
+    # Intrinsic calculation pass pulling size variables dynamically
+    let total_elements = len(dataset);
+    
+    while (i < total_elements) {
+        sum = sum + dataset[i];
+        i = i + 1;
+    }
+    
+    return sum / total_elements;
+}
+
+# Define our raw metrics stream array
+let telemetry_data = [88, 92, 79, 95, 100];
+
+# Call the function passing the array seamlessly
+let localized_average = compute_average(telemetry_data);
+
+print "Telemetry Array Length Detected:";
+print len(telemetry_data);
+
+print "Computed Safe Native Array Average Data:";
+print localized_average;

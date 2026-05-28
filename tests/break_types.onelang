@@ -1,0 +1,18 @@
+# Global variable 'status' is inferred as a STRING
+let status = "GLOBAL_ACTIVE";
+
+fn override_state(metric) {
+    # Local variable 'status' is an INTEGER! 
+    # Will this overwrite or confuse the global type tracking system?
+    let status = 100;
+    let calculation = metric + status;
+    return calculation;
+}
+
+let result = override_state(50);
+
+print "Global string should be intact:";
+print status;
+
+print "Function calculation result:";
+print result;
